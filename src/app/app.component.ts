@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'author-directory';
+  title = 'Author Directory';
+  detailInfo: string = 'Md Mehrab Shahriar, CSE EWU | Date: 06 Feb, 2022';
 }
