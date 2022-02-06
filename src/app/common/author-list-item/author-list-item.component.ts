@@ -18,7 +18,6 @@ export class AuthorListItemComponent implements OnInit {
 
 
   addFavourite(eventName){
-    console.log(eventName)
     this.childBtnClick.emit({
       data:this.author,
       name:eventName

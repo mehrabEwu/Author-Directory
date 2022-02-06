@@ -13,6 +13,7 @@ export class AuthorDiaryComponent implements OnInit {
   authorList: Author[];
   fav:Object;
   paginationData:Pagination;
+  sub: any;
   constructor(private AuthorService: AuthorsService,
     private localStorage:TempDataService
     ) {
@@ -24,7 +25,10 @@ export class AuthorDiaryComponent implements OnInit {
     this.getData(10,3)
   }
 
+ngOnDestroy(): void {
+  this.sub.unsubscribe();
 
+}
 
   childComponetBtnClick(event){
     switch (event?.name) {
@@ -51,7 +55,7 @@ export class AuthorDiaryComponent implements OnInit {
       limit: limit,
       skip: (pageNo-1)*limit,
     };
-    this.AuthorService.getAuthorInfo(params).subscribe(
+   this.sub=this.AuthorService.getAuthorInfo(params).subscribe(
       (resp: any) => {
         this.paginationData = new Pagination(resp);
         this.authorList = resp?.results?.map((item) => {
