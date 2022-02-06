@@ -3,10 +3,7 @@
   <div
     class="card-header text-white text-right"
     [ngClass]="author.isFav ? 'bg-red' : 'bg-black'">
-    <span class="" (click)="addFavourite(author.isFav ? 'remove' : 'add')">{{
-      author.isFav ? "Remove Favt" : "Add Favt"
-    }}</span>
-    <!-- <span (click)="addFavourite('remove')">Add Favt</span> -->
+    <span class="" (click)="addFavourite(author.isFav ? 'remove' : 'add')">{{author.isFav ? "Remove Favt" : "Add Favt"}}</span>
   </div>
   <div class="card-body">
     <h5 class="card-title"><span>Name: </span>{{ author.name }}</h5>
