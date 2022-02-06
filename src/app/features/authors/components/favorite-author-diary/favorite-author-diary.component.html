@@ -1,0 +1,8 @@
+<div class="row">
+    <ng-container *ngFor="let author of authorList">
+      <div class="col-sm-12  col-md-6 col-lg-4 mt-4">
+        <app-author-list-item [author]=author (childBtnClick)="childComponetBtnClick($event)"></app-author-list-item>
+      </div>
+    </ng-container>
+  </div>
+  

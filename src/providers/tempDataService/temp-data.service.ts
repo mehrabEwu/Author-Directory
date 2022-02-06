@@ -11,15 +11,16 @@ export class TempDataService extends Base {
    }
 
   getData(index: string) {
-
+    const data = localStorage.getItem(index)
+    return data ? JSON.parse(data) : null
   }
 
   setData(index: string, value: any): void {
-
+    localStorage.setItem(index,JSON.stringify(value));
   }
 
   deleteData(index: string): void {
-
+    localStorage.removeItem(index);
   }
 
   clearStorage(): void {

@@ -1,0 +1,5 @@
+<div class="page mt-3 text-center">
+  <button class="btn btn-dark" [disabled]="pages.page==1" type="button" (click)="onClickedPage('prev')">Prev</button>
+  <span class="mx-2">Page:{{pages.page}}</span>
+  <button class="btn btn-dark" [disabled]="pages.page==pages.totalPages" type="button" (click)="onClickedPage('next')">Next</button>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="card">
+  <div
+    class="card-header text-white text-right"
+    [ngClass]="author.isFav ? 'bg-red' : 'bg-black'">
+    <span class="" (click)="addFavourite(author.isFav ? 'remove' : 'add')">{{
+      author.isFav ? "Remove Favt" : "Add Favt"
+    }}</span>
+    <!-- <span (click)="addFavourite('remove')">Add Favt</span> -->
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><span>Name: </span>{{ author.name }}</h5>
+    <p class="card-text"><span>Date: </span>{{ author.dateAdded | date }}</p>
+    <p class="card-text"><span>Bio: </span>{{ author.bio | wrap:60 }}</p>
+    <p>
+      <span>Link:</span> <a href={{author.link}} class="card-link">{{ author.link | wrap:40 }}</a>
+    </p>
+  </div>
+</div>

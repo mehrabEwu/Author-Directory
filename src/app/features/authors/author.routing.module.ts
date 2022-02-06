@@ -1,8 +1,7 @@
-
+import { FavoriteAuthorDiaryComponent } from './components/favorite-author-diary/favorite-author-diary.component';
+import { AuthorDiaryComponent } from './components/author-diary/author-diary.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthorDiaryComponent } from './component/author-diary/author-diary.component';
-import { FavoriteAuthorDiaryComponent } from './component/favorite-author-diary/favorite-author-diary.component';
 
 
 

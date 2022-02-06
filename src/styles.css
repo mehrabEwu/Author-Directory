@@ -1,4 +1,5 @@
 
+
 *{
   margin: 0;
   padding: 0;
@@ -11,4 +12,13 @@ body{
   box-sizing: border-box;
 }
 
+.bg-black{
+  background-color: black;
+}
 
+.bg-red{
+  background-color: rgb(235, 18, 11);
+}
+.btn-dark{
+  background-color: black;
+}
